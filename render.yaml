@@ -4,7 +4,6 @@ services:
     env: docker
     image:
       url: asreview/asreview:2.4
-    healthCheckPath: /
     disk:
       name: asreview-data
       mountPath: /root/.asreview
