@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: asreview-server
+    env: docker
+    image:
+      url: asreview/asreview:2.4
+    healthCheckPath: /
+    disk:
+      name: asreview-data
+      mountPath: /root/.asreview
+      sizeGB: 1
+    startCommand: "asreview lab --ip 0.0.0.0 --port 10000 --allow-server-startup"
